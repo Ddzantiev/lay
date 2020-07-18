@@ -126,7 +126,7 @@ header{
 }
 .header__number_mobile{
     text-decoration: none;
-    color: black;
+    color: green;
     font-weight: bold;
     margin: 0 20px;
 }
