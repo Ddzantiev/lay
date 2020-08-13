@@ -7,19 +7,69 @@
     <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
     <link rel="manifest" href="site.webmanifest">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
     <link rel="stylesheet" type="text/css" href="css/styles.css">
     <meta name="viewport" content="width=device-width">
 </head>
 <body>
+    <div class="popup-container">
+        <div class="popup">
+          <form id="form" name="form">
+          <h3 class="title-popup">Обратная связь</h3>
+          <button class="js-close-popup">x</button>
+          <label>
+          <span class="visually-hidden"> Ваше имя</span>
+            <input class="input-popup" name="name" required="" type="text" 
+            placeholder="Ваше имя"/>
+          </label>
+          <label>
+          <span class="visually-hidden">Ваша почта </span>
+            <input class="input-popup"  name="email" type="text" 
+            placeholder="Ваша почта"/>
+          </label>
+          <label> 
+          <span class="visually-hidden">Ваш номер телефона</span>
+            <input class="input-popup" name="phone" required="" id="phone" type="text" 
+             placeholder="Ваш номер телефона"/>
+          </label>
+          <label>  
+          <span class="visually-hidden">Ваш текст</span>
+            <textarea class="input-popup" cols="32"  name="message" rows="5" placeholder="Текст сообщения"></textarea>
+          </label>
+            <input class="popup-btn" type="submit" value="Отправить" >
+          </form>
+        </div>
+    </div>
+    <div class="nav-mobile">
+           <ul >
+            <li>
+                <a class="nav-mobile__link" href="#my-scope">Услуги</a>
+            </li>
+            <li>
+                <a class="nav-mobile__link" href="#price">Стоимость</a>
+            </li>
+            <li>
+                <a class="nav-mobile__link" href="#my-job">Портфолио</a>
+            </li>
+           </ul>
+       </div>
+
 <header>
    <div class="fixed-container header__container">
        <nav class="header__menu">
            <ul >
-            <li><a href="#">Услуги</a></li>
-            <li><a href="#">Стоимость</a></li>
-            <li><a href="#">Портфолио</a></li>
+            <li>
+                <a class="header__link" href="#my-scope">Услуги</a>
+            </li>
+            <li>
+                <a class="header__link" href="#price">Стоимость</a>
+            </li>
+            <li>
+                <a class="header__link" href="#my-job">Портфолио</a>
+            </li>
            </ul>
        </nav>
         <div class="header__menu_mobile">
@@ -30,12 +80,12 @@
             </a>
         </div>
         <div class="header__contact">
-            <a class="header__number" href="#">+7 (988) 837-00-17</a>
-            <button class="header__btn">Заказать звонок</button>
+            <a class="header__number" href="tel:+79888370017">+7 (988) 837-00-17</a>
+            <button class="header__btn js__btn">Заказать звонок</button>
         </div>
         <div class="header__contact_mobile">
-            <a class="header__number_mobile" href="#">+7 (988) 837-00-17</a>
-            <button class="header__btn_mobile"></button>
+            <a class="header__number_mobile" href="tel:+79888370017">+7 (988) 837-00-17</a>
+            <button class="header__btn_mobile js__btn"></button>
         </div>
    </div>
 </header>
@@ -44,69 +94,153 @@
         <div class="fixed-container hello__container">
              <div class="section-hello__tegs">
                  <p class="section-hello__tegs teg_hooks">{ }</p>
+
                  <p class="section-hello__tegs teg_div-one">&lt;div&gt;</p>
+
                  <p class="section-hello__tegs teg_grid">#</p>
+
                  <p class="section-hello__tegs teg_slash">&lt;/&gt;</p>
+
                  <p class="section-hello__tegs teg_div-two">&lt;div&gt;</p>
              </div>
             <div class="hello__text">
                 <h1 class="hello__title">Давид Дзантиев</h1>
                 <p class="hello__desc"> Frontend-разработчик и веб-верстальщик </p>
-                <button class="hello__btn">Узнать больше</button>
+                <button class="hello__btn js__btn">Узнать больше</button>
             </div>
             <div class="hello__pictures">
-                <img class="hello__ellipse" src="img/ellipse.png">
-                <img class="hello__photo" src="img/photo.png">
+                <img class="hello__ellipse" src="img/ellipse.png" alt="#">
+
+                <img class="hello__photo" src="img/photo.png" alt="#">
             </div>
         </div>
     </section>
-    <section class="my-job">
-        <div class="fixed-container my-job__container">
-            <h4 class="my-job__text">Примеры моих работ</h4>
-            <button class="my-job__btn"> <img src="Элементы/arrow.png"></button>
-        </div>        
+    <section id="my-scope">
+        <div class="fixed-container my-scope__container">
+            <h2 class="my-scope__title">Что я делаю</h2>
+            <ul class="my-scope__list">
+                <li class="my-scope__item">
+                   <p class="my-scope__img"><img src="img/tools1.png" alt="#"></p>
+
+                    <p class="my-scope__text">Верста и лендинг-страниц и сайтов любой сложности
+                    </p>
+                </li>
+                <li class="my-scope__item">
+                    <p class="my-scope__img"><img src="img/responsive.png" alt="#"></p>
+
+                    <p class="my-scope__text">Адаптивная верстка под все устроиства и браузеры</p>
+                </li>
+                <li class="my-scope__item">
+                   <p class="my-scope__img"> <img src="img/programming.png" alt="#"></p>
+
+                    <p class="my-scope__text">Frontend-разработка и программирование</p>
+                </li>
+                <li class="my-scope__item">
+                    <p class="my-scope__img"><img src="img/coding.png" alt="#"></p>
+
+                    <p class="my-scope__text">Исправление и доработка существующей верстки</p>
+                </li>
+            </ul>
+            <p class="my-scope__btn_align">
+                <button class="my-scope__btn js__btn">Узнать стоимость</button>
+            </p>
+        </div>
     </section>
-    <section class="price">
+ <section id="my-job">
+    <h2 class="swiper-container__title">Примеры моих работ</h2>
+ <div class="swiper-inner">
+   <div class="swiper-container"> 
+    <div class="swiper-wrapper">
+        <div class="swiper-slide">
+            <img src="img/site1.png" alt="David">  
+            <p class="swiper-slide__text">Сайт психолога Веры Антоновой</p>            
+        </div>
+        <div class="swiper-slide">
+            <img src="img/site2.png" alt="David">
+            <p class="swiper-slide__text">Сайт магазина детской одежды</p>
+        </div>
+        <div class="swiper-slide">
+            <img src="img/site3.png" alt="David">
+            <p class="swiper-slide__text">Сайт магазина «Рыболов»</p>
+        </div>        
+    </div>
+    <div class="swiper-pagination"></div>
+    <button class="swiper-button-prev arrow__left"></button>
+    <button class="swiper-button-next arrow__right"></button>
+   </div>
+  </div> 
+ <p class="my-job__btn_align">
+    <button class="my-job__btn js__btn">Заказать проект</button>
+ </p>
+ </section> 
+    <section id="price">
         <div class="fixed-container price-container">
             <div class="price-container__tegs">
-                        <p class="price-container__tegs price-teg_hooks">{ }</p>
+                        <p class="price-container__tegs price-teg_hooks">{ }</p> 
+
                         <p class="price-container__tegs price-teg_hooks-two">{ }</p>
+
                         <p class="price-container__tegs price-teg_div-one">&lt;div&gt;</p>
+
                         <p class="price-container__tegs price-teg_grid">#</p>
+
                         <p class="price-container__tegs price-teg_slash">&lt;/&gt;</p>
                 </div> 
-                   <h4 class="price-container__text">Адаптивная вёрстка под все устройства
+                   <h1 class="price-container__text">Адаптивная вёрстка под все устройства
                        и&nbsp;браузеры от&nbsp;1000 рублей всего за&nbsp;4&nbsp;часа.
-                   </h4>
+                   </h1>
+                       <p class="price-container__desc">
+                        <small>*Срок и стоимость могут отличаться от заявленных и рассчитываются индивидуально,в зависимости от сложности задач</small>
+                       </p>
+                   
         </div>
     </section>
 </main>
 <footer>
     <div class="fixed-container footer__container">
         <ul class="footer__menu">
-                <li><a href="#">Услуги</a></li>
-                <li><a href="#">Портфолио</a></li>
-                <li><a href="#">Стоимость</a></li>
+                <li>
+                    <a class="footer__link" href="#my-scope">Услуги</a>
+                </li>
+                <li>
+                    <a class="footer__link" href="#my-job">Портфолио</a>
+                </li>
+                <li>
+                    <a class="footer__link" href="#price">Стоимость</a>
+                </li>
             </ul>
         <ul class="footer__contact">
-            <li><i class="fas fa-phone-alt"></i><a href="#">+7(988)837-00-17</a></li>
-            <li><i class="fas fa-envelope"></i><a href="#">Ddzantiev@yandex.ru</a></li>
+            <li><i class="fas fa-phone-alt"></i>
+                <a class="footer__contact-link" href="tel:+79888370017">+7(988)837-00-17</a>
+            </li>
+            <li><i class="fas fa-envelope"></i>
+                <a class="footer__contact-link" 
+                href="mailto:ddzantiev@yandex.ru">Ddzantiev@yandex.ru</a>
+            </li>
         </ul>
         <div class="footer__soc-link">
-            <button class="footer__soc-link_btn">Заказать звонок</button>
+            <button class="footer__soc-link_btn js__btn">Заказать звонок</button>
             <div class="soc-container">
-            <a href="#" class="icon icon-vk"></a>
-            <a href="#" class="icon icon-facebook" ></a>
-            <a href="#" class="icon icon-twitter"></a>
-            <a href="#" class="icon icon-instagram" ></a>
+            <a href="https://vk.com/id308826793" target="_blank" class="icon icon-vk"></a>
+
+            <a href="https://www.facebook.com/" target="_blank" class="icon icon-facebook" ></a>
+
+            <a href="https://twitter.com/" target="_blank" class="icon icon-twitter"></a>
+
+            <a href="https://instagramm.com/" target="_blank" class="icon icon-instagram" ></a>
             </div>
             
         </div>
     </div>
+         <div class="end">
+            <small>© Дзантиев Давид, 2019-2020 все права защищены</small>
+         </div>
 </footer>
-
+<script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 <script src="js/jquery-3.4.1.min.js"></script>
 <script src="js/script.js"></script>
+<script src="js/jquery.maskedinput.min.js"></script>
 <script src="https://kit.fontawesome.com/1c9b67a80c.js" crossorigin="anonymous"></script>
 </body>
 </html>
